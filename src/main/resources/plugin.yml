@@ -1,7 +1,30 @@
 name: BladeCore
 version: ${project.version}
 main: me.acablade.bladecore.BladeCore
-api-version: 1.16.5
+api-version: 1.13
 authors: [Acablade]
 description: EnderCore but its worth its price (free)
 website: https://www.github.com/Acablade
+commands:
+  inventory:
+    aliases: [inv]
+    description: Opens targeted players inventory
+  tpo:
+    aliases: [teleport]
+    description: Teleports player to player
+  message:
+    aliases: [msg]
+    description: Private messages a player
+  reply:
+    aliases: [r]
+    description: Replies to private message
+  broadcast:
+    aliases: [bc]
+    description: Broadcasts a message
+  clearchat:
+    aliases: [cc]
+    description: Clears chat
+  fly:
+    description: Toggles flight
+  bladecore:
+    description: Main command of the plugin
