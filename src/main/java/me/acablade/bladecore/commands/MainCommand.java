@@ -22,13 +22,13 @@ public class MainCommand implements CommandExecutor,ICommand {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if(args.length == 0){
-            sender.sendMessage("§m§8-------- §r§bBladeCore §m§8--------");
+            sender.sendMessage("§8§m-------- §r§bBladeCore §8§m--------");
             for(ICommand cmd: commandList){
                 if(sender.hasPermission(cmd.getPermission()) || cmd.getPermission().length() <= 3){
                     sender.sendMessage("§b"+cmd.getSyntax()+ " §7: "  +cmd.getDescription());
                 }
             }
-            sender.sendMessage("§m§8-----------------------------------");
+            sender.sendMessage("§8§m-------------------------");
         }else if(args.length == 1){
             if(args[0].equalsIgnoreCase("reload")){
                 if(!sender.hasPermission("bladecore.reload")){
