@@ -1,0 +1,7 @@
+name: BladeCore
+version: ${project.version}
+main: me.acablade.bladecore.BladeCore
+api-version: 1.16.5
+authors: [Acablade]
+description: EnderCore but its worth its price (free)
+website: https://www.github.com/Acablade
