@@ -37,7 +37,6 @@ public class GMSCommand implements CommandExecutor, ICommand {
 
         if(args.length > 1){
             MessageSender.sendMessageAtPath(sender, ConfigMessage.WRONG_SYNTAX,
-                    "PREFIX",ConfigMessage.PREFIX.getMessage(),
                     "SYNTAX",getSyntax());
         }else{
             if(args.length == 1){
@@ -48,11 +47,9 @@ public class GMSCommand implements CommandExecutor, ICommand {
                 }
                 p.setGameMode(GameMode.SURVIVAL);
                 MessageSender.sendMessageAtPath(sender,ConfigMessage.SUCCESSFUL_GAMEMODE,
-                        "PREFIX", ConfigMessage.PREFIX.getMessage(),
                         "PLAYER", p.getName(),
                         "GAMEMODE", GameMode.SURVIVAL.name());
                 MessageSender.sendMessageAtPath(p,ConfigMessage.SUCCESSFUL_GAMEMODE,
-                        "PREFIX", ConfigMessage.PREFIX.getMessage(),
                         "PLAYER", p.getName(),
                         "GAMEMODE", GameMode.SURVIVAL.name());
 
@@ -64,7 +61,6 @@ public class GMSCommand implements CommandExecutor, ICommand {
                 Player p = (Player) sender;
                 p.setGameMode(GameMode.SURVIVAL);
                 MessageSender.sendMessageAtPath(sender,ConfigMessage.SUCCESSFUL_GAMEMODE,
-                        "PREFIX", ConfigMessage.PREFIX.getMessage(),
                         "PLAYER", p.getName(),
                         "GAMEMODE", GameMode.SURVIVAL.name());
             }

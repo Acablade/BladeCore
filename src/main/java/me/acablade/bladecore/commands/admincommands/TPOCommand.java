@@ -46,11 +46,11 @@ public class TPOCommand implements CommandExecutor, ICommand {
                 teleport(sender,toTeleport,teleportTo);
             }else{
                 if(teleportTo == null && toTeleport == null){
-                    MessageSender.sendMessageAtPath(sender, ConfigMessage.PLAYER_NOT_ACTIVE,"PREFIX",ConfigMessage.PREFIX.getMessage(),"PLAYER","Both players");
+                    MessageSender.sendMessageAtPath(sender, ConfigMessage.PLAYER_NOT_ACTIVE,"PLAYER","Both players");
                 }else if(teleportTo == null){
-                    MessageSender.sendMessageAtPath(sender, ConfigMessage.PLAYER_NOT_ACTIVE,"PREFIX",ConfigMessage.PREFIX.getMessage(),"PLAYER",teleportTo.getName());
+                    MessageSender.sendMessageAtPath(sender, ConfigMessage.PLAYER_NOT_ACTIVE,"PLAYER",teleportTo.getName());
                 }else{
-                    MessageSender.sendMessageAtPath(sender, ConfigMessage.PLAYER_NOT_ACTIVE,"PREFIX",ConfigMessage.PREFIX.getMessage(),"PLAYER",toTeleport.getName());
+                    MessageSender.sendMessageAtPath(sender, ConfigMessage.PLAYER_NOT_ACTIVE,"PLAYER",toTeleport.getName());
                 }
             }
 
@@ -62,13 +62,12 @@ public class TPOCommand implements CommandExecutor, ICommand {
             Player player = (Player) sender;
             Player dest = Bukkit.getPlayer(args[0]);
             if(dest == null){
-                MessageSender.sendMessageAtPath(sender, ConfigMessage.PLAYER_NOT_ACTIVE,"PREFIX",ConfigMessage.PREFIX.getMessage(),"PLAYER",dest.getName());
+                MessageSender.sendMessageAtPath(sender, ConfigMessage.PLAYER_NOT_ACTIVE,"PLAYER",dest.getName());
                 return false;
             }
             teleport(sender,player,dest);
         }else{
             MessageSender.sendMessageAtPath(sender, ConfigMessage.WRONG_SYNTAX,
-                    "PREFIX", ConfigMessage.PREFIX.getMessage(),
                     "SYNTAX", getSyntax());
         }
 
@@ -78,7 +77,6 @@ public class TPOCommand implements CommandExecutor, ICommand {
     public void teleport(@Nullable CommandSender sender, Player player, Player dest){
         player.teleport(dest);
         MessageSender.sendMessageAtPath(sender == null ? player:sender,ConfigMessage.SUCCESSFUL_TELEPORT,
-                    "PREFIX", ConfigMessage.PREFIX.getMessage(),
                     "PLAYER", player.getName(),
                     "DESTINATION",dest.getName());
     }

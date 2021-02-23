@@ -50,12 +50,10 @@ public class GameModeCommand implements CommandExecutor, ICommand {
             if(gameModeEnum != null){
                 p.setGameMode(gameModeEnum.getGameMode());
                 MessageSender.sendMessageAtPath(sender,ConfigMessage.SUCCESSFUL_GAMEMODE,
-                        "PREFIX", ConfigMessage.PREFIX.getMessage(),
                         "PLAYER", p.getName(),
                         "GAMEMODE", gameModeEnum.getGameMode().name());
             }else{
                 MessageSender.sendMessageAtPath(sender,ConfigMessage.WRONG_SYNTAX,
-                        "PREFIX",ConfigMessage.PREFIX.getMessage(),
                         "SYNTAX",getSyntax());
             }
         }else if(args.length == 2){
@@ -75,21 +73,17 @@ public class GameModeCommand implements CommandExecutor, ICommand {
             if(gameModeEnum != null){
                 p.setGameMode(gameModeEnum.getGameMode());
                 MessageSender.sendMessageAtPath(sender,ConfigMessage.SUCCESSFUL_GAMEMODE,
-                        "PREFIX", ConfigMessage.PREFIX.getMessage(),
                         "PLAYER", p.getName(),
                         "GAMEMODE", gameModeEnum.getGameMode().name());
                 MessageSender.sendMessageAtPath(p,ConfigMessage.SUCCESSFUL_GAMEMODE,
-                        "PREFIX", ConfigMessage.PREFIX.getMessage(),
                         "PLAYER", p.getName(),
                         "GAMEMODE", gameModeEnum.getGameMode().name());
             }else{
                 MessageSender.sendMessageAtPath(sender,ConfigMessage.WRONG_SYNTAX,
-                        "PREFIX",ConfigMessage.PREFIX.getMessage(),
                         "SYNTAX",getSyntax());
             }
         }else{
             MessageSender.sendMessageAtPath(sender,ConfigMessage.WRONG_SYNTAX,
-                    "PREFIX",ConfigMessage.PREFIX.getMessage(),
                     "SYNTAX",getSyntax());
         }
 

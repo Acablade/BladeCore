@@ -37,7 +37,6 @@ public class GMACommand implements CommandExecutor, ICommand {
 
         if(args.length > 1){
             MessageSender.sendMessageAtPath(sender, ConfigMessage.WRONG_SYNTAX,
-                    "PREFIX",ConfigMessage.PREFIX.getMessage(),
                     "SYNTAX",getSyntax());
         }else{
             if(args.length == 1){
@@ -48,11 +47,9 @@ public class GMACommand implements CommandExecutor, ICommand {
                 }
                 p.setGameMode(GameMode.ADVENTURE);
                 MessageSender.sendMessageAtPath(sender,ConfigMessage.SUCCESSFUL_GAMEMODE,
-                        "PREFIX", ConfigMessage.PREFIX.getMessage(),
                         "PLAYER", p.getName(),
                         "GAMEMODE", GameMode.ADVENTURE.name());
                 MessageSender.sendMessageAtPath(p,ConfigMessage.SUCCESSFUL_GAMEMODE,
-                        "PREFIX", ConfigMessage.PREFIX.getMessage(),
                         "PLAYER", p.getName(),
                         "GAMEMODE", GameMode.ADVENTURE.name());
 
@@ -64,7 +61,6 @@ public class GMACommand implements CommandExecutor, ICommand {
                 Player p = (Player) sender;
                 p.setGameMode(GameMode.ADVENTURE);
                 MessageSender.sendMessageAtPath(sender,ConfigMessage.SUCCESSFUL_GAMEMODE,
-                        "PREFIX", ConfigMessage.PREFIX.getMessage(),
                         "PLAYER", p.getName(),
                         "GAMEMODE", GameMode.ADVENTURE.name());
             }

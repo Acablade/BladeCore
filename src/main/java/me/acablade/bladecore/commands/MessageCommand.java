@@ -43,12 +43,12 @@ public class MessageCommand implements CommandExecutor, ICommand {
             if(to!=null){
                 PrivateMessaging.sendMessage(to,sender, messageBuilder.substring(0,messageBuilder.toString().length()-1));
             }else{
-                MessageSender.sendMessageAtPath(sender,ConfigMessage.PLAYER_NOT_ACTIVE.getPath(),"PREFIX",ConfigMessage.PREFIX.getMessage(),"PLAYER",to.getName());
+                MessageSender.sendMessageAtPath(sender,ConfigMessage.PLAYER_NOT_ACTIVE.getPath(),"PLAYER",to.getName());
             }
 
 
         }else{
-            MessageSender.sendMessageAtPath(sender, ConfigMessage.WRONG_SYNTAX,new String[]{"PREFIX", ConfigMessage.PREFIX.getMessage(),"SYNTAX", getSyntax()});
+            MessageSender.sendMessageAtPath(sender, ConfigMessage.WRONG_SYNTAX,"SYNTAX", getSyntax());
         }
         return false;
     }

@@ -20,7 +20,6 @@ public class ClearChatCommand implements CommandExecutor, ICommand {
         }
         if(args.length > 0){
             MessageSender.sendMessageAtPath(sender, ConfigMessage.WRONG_SYNTAX,
-                    "PREFIX",ConfigMessage.PREFIX.getMessage(),
                     "SYNTAX",getSyntax());
             return false;
         }
@@ -31,7 +30,6 @@ public class ClearChatCommand implements CommandExecutor, ICommand {
         }
         for(Player player: Bukkit.getOnlinePlayers()){
             MessageSender.sendMessageAtPath(player,ConfigMessage.CHAT_CLEARED,
-                    "PREFIX", ConfigMessage.PREFIX.getMessage(),
                     "PLAYER", sender.getName());
         }
 

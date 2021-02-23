@@ -39,7 +39,6 @@ public class MainCommand implements CommandExecutor,ICommand {
             }
         }else{
             MessageSender.sendMessageAtPath(sender,ConfigMessage.WRONG_SYNTAX,
-                    "PREFIX",ConfigMessage.PREFIX.getMessage(),
                     "SYNTAX",getSyntax());
         }
 

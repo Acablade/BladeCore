@@ -20,7 +20,6 @@ public class BroadcastCommand implements CommandExecutor, ICommand {
         }
         if(args.length < 1){
             MessageSender.sendMessageAtPath(sender,ConfigMessage.WRONG_SYNTAX,
-                    "PREFIX", ConfigMessage.PREFIX.getMessage(),
                     "SYNTAX", getSyntax());
         }else{
             StringBuilder messageBuilder = new StringBuilder();
@@ -30,7 +29,6 @@ public class BroadcastCommand implements CommandExecutor, ICommand {
             String message = messageBuilder.toString().substring(0,messageBuilder.toString().length()-1);
             for(Player player: Bukkit.getOnlinePlayers()){
                 MessageSender.sendMessageAtPath(player, ConfigMessage.BROADCAST_FORMAT,
-                        "PREFIX", ConfigMessage.PREFIX.getMessage(),
                         "MESSAGE",message);
             }
         }

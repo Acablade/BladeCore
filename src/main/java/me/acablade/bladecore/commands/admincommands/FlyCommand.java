@@ -37,7 +37,6 @@ public class FlyCommand implements CommandExecutor, ICommand {
             allowFlight(sender,target,!target.getAllowFlight());
         }else{
             MessageSender.sendMessageAtPath(sender,ConfigMessage.WRONG_SYNTAX,
-                    "PREFIX",ConfigMessage.PREFIX.getMessage(),
                     "SYNTAX",getSyntax());
         }
 
@@ -62,11 +61,9 @@ public class FlyCommand implements CommandExecutor, ICommand {
     private void allowFlight(@Nullable CommandSender sender, Player p, boolean allowFlight){
         p.setAllowFlight(allowFlight);
         MessageSender.sendMessageAtPath(p, p.getAllowFlight()?ConfigMessage.FLY_ENABLED:ConfigMessage.FLY_DISABLED,
-                "PREFIX", ConfigMessage.PREFIX.getMessage(),
                 "PLAYER", p.getName());
         if(sender!= null){
             MessageSender.sendMessageAtPath(sender, p.getAllowFlight()?ConfigMessage.FLY_ENABLED:ConfigMessage.FLY_DISABLED,
-                    "PREFIX", ConfigMessage.PREFIX.getMessage(),
                     "PLAYER", p.getName());
         }
     }

@@ -37,7 +37,6 @@ public class GMCCommand implements CommandExecutor, ICommand {
 
         if(args.length > 1){
             MessageSender.sendMessageAtPath(sender, ConfigMessage.WRONG_SYNTAX,
-                    "PREFIX",ConfigMessage.PREFIX.getMessage(),
                     "SYNTAX",getSyntax());
         }else{
             if(args.length == 1){
@@ -48,11 +47,9 @@ public class GMCCommand implements CommandExecutor, ICommand {
                 }
                 p.setGameMode(GameMode.CREATIVE);
                 MessageSender.sendMessageAtPath(sender,ConfigMessage.SUCCESSFUL_GAMEMODE,
-                        "PREFIX", ConfigMessage.PREFIX.getMessage(),
                         "PLAYER", p.getName(),
                         "GAMEMODE", GameMode.CREATIVE.name());
                 MessageSender.sendMessageAtPath(p,ConfigMessage.SUCCESSFUL_GAMEMODE,
-                        "PREFIX", ConfigMessage.PREFIX.getMessage(),
                         "PLAYER", p.getName(),
                         "GAMEMODE", GameMode.CREATIVE.name());
 
@@ -64,7 +61,6 @@ public class GMCCommand implements CommandExecutor, ICommand {
                 Player p = (Player) sender;
                 p.setGameMode(GameMode.CREATIVE);
                 MessageSender.sendMessageAtPath(sender,ConfigMessage.SUCCESSFUL_GAMEMODE,
-                        "PREFIX", ConfigMessage.PREFIX.getMessage(),
                         "PLAYER", p.getName(),
                         "GAMEMODE", GameMode.CREATIVE.name());
             }

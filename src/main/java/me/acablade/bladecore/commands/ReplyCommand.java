@@ -26,7 +26,6 @@ public class ReplyCommand implements CommandExecutor, ICommand {
 
         if(args.length == 0){
             MessageSender.sendMessageAtPath(sender,ConfigMessage.WRONG_SYNTAX,
-                    "PREFIX", ConfigMessage.PREFIX.getMessage(),
                     "SYNTAX",getSyntax());
         }
 
@@ -41,7 +40,7 @@ public class ReplyCommand implements CommandExecutor, ICommand {
         Player to = Bukkit.getPlayer(PrivateMessaging.messageHashMap.get(from.getUniqueId()));
 
         if(to==null) {
-            MessageSender.sendMessageAtPath(sender,ConfigMessage.PLAYER_NOT_ACTIVE.getPath(),"PREFIX",ConfigMessage.PREFIX.getMessage(),"PLAYER",to.getName());
+            MessageSender.sendMessageAtPath(sender,ConfigMessage.PLAYER_NOT_ACTIVE.getPath(),"PLAYER",to.getName());
             return false;
         }
         StringBuilder messageBuilder = new StringBuilder();

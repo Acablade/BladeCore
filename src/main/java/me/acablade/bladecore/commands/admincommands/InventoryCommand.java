@@ -24,14 +24,12 @@ public class InventoryCommand implements CommandExecutor, ICommand {
                 Player target = Bukkit.getPlayer(args[0]);
                 if(target == null){
                     MessageSender.sendMessageAtPath(p,ConfigMessage.PLAYER_NOT_ACTIVE,
-                            "PREFIX", ConfigMessage.PREFIX.getMessage(),
                             "PLAYER", args[0]);
                     return false;
                 }
                 p.openInventory(target.getInventory());
             }else{
                 MessageSender.sendMessageAtPath(p,ConfigMessage.WRONG_SYNTAX,
-                        "PREFIX", ConfigMessage.PREFIX.getMessage(),
                         "SYNTAX", getSyntax());
             }
         }
