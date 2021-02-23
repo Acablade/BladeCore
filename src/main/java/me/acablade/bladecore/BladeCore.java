@@ -37,6 +37,11 @@ public final class BladeCore extends JavaPlugin {
         getCommand("message").setExecutor(new MessageCommand());
         getCommand("reply").setExecutor(new ReplyCommand());
         getCommand("bladecore").setExecutor(new MainCommand());
+        getCommand("gamemode").setExecutor(new GameModeCommand());
+        getCommand("gmc").setExecutor(new GMCCommand());
+        getCommand("gma").setExecutor(new GMACommand());
+        getCommand("gms").setExecutor(new GMSCommand());
+        getCommand("gmsp").setExecutor(new GMSPCommand());
 
     }
 

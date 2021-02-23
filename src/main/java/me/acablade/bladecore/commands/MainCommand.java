@@ -55,6 +55,11 @@ public class MainCommand implements CommandExecutor,ICommand {
         commandList.add(new MessageCommand());
         commandList.add(new ReplyCommand());
         commandList.add(new TPOCommand());
+        commandList.add(new GameModeCommand());
+        commandList.add(new GMACommand());
+        commandList.add(new GMSCommand());
+        commandList.add(new GMSPCommand());
+        commandList.add(new GMCCommand());
         commandList.add(new MainCommand());
     }
 

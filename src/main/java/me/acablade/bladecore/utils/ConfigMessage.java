@@ -16,6 +16,7 @@ public enum ConfigMessage {
     FLY_DISABLED("fly-disabled"),
     BROADCAST_FORMAT("broadcast-format"),
     INSUFFICIENT_PERMISSIONS("insufficient-permissions"),
+    SUCCESSFUL_GAMEMODE("successful-gamemode"),
     PREFIX("prefix");
 
 

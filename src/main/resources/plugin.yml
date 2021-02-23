@@ -28,3 +28,14 @@ commands:
     description: Toggles flight
   bladecore:
     description: Main command of the plugin
+  gamemode:
+    aliases: [gm]
+    description: sets gamemode
+  gmc:
+    description: quick gamemode creative
+  gms:
+    description: quick gamemode survival
+  gmsp:
+    description: quick gamemode spectator
+  gma:
+    description: quick gamemode adventure
